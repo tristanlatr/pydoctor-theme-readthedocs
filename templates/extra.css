@@ -156,7 +156,8 @@ code {
 
 code > a, a.sourceLink {
     background: rgb(255, 255, 255);
-    font-family: Menlo bold, Monaco bold, Consolas bold, "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-weight: bold;
     border: 2px solid rgb(225, 228, 229);
     border-bottom: 2px solid rgb(225, 228, 229);
     border-color: rgb(225, 228, 229);
