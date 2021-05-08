@@ -219,6 +219,18 @@ div.tip, div.hint, div.important {
     background-color: #d9edf7;
 }
 
+pre{
+    box-sizing: border-box;
+    color: rgb(64, 64, 64);
+    display: block;
+    font: normal normal normal normal 18px/24px SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
+    overflow: auto;
+    padding: 12px;border: 1px solid rgb(225, 228, 229);
+    white-space: pre;
+    background: rgb(248, 248, 248);
+    
+}
+
 @font-face {
     font-family: Lato;
     src: url(fonts/lato-normal.woff2) format("woff2"), url(fonts/lato-normal.woff) format("woff");
