@@ -99,18 +99,50 @@ a:hover{
 #splitTables > table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
-    border: 1px solid rgb(225, 228, 229);
+    border: 1px solid rgb(210, 220, 216);
     border-bottom: 0;
     vertical-align: middle;
 }
 
 #splitTables > table td {
-    border-bottom: 1px solid rgb(225, 228, 229);
+    border-bottom: 1px solid rgb(210, 220, 216);
 }
+
+code, .pre, #childList > div .functionHeader,
+#splitTables > table tr td:nth-child(2), .fieldArg {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    background: transparent;
+}
+
+code > a, a.sourceLink {
+    background: rgb(255, 255, 255);
+    font-family: Menlo bold, Monaco bold, Consolas bold, "Courier New", monospace;
+    border: 2px solid rgb(225, 228, 229);
+    border-bottom: 2px solid rgb(225, 228, 229);
+    border-color: rgb(225, 228, 229);
+    border-image: none;
+    border-left: 2px solid rgb(225, 228, 229);
+    border-right: 2px solid rgb(225, 228, 229);
+    border-style: solid;
+    border-top: 2px solid rgb(225, 228, 229);
+    border-width: 2px;
+
+
+    padding: 2px 5px;
+}
+
+/* top navagation bar */
+.page-header > h1 {
+    margin-top: 0;
+}
+.page-header > h1 > code {
+    color: #971c3a;
+}
+
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato-normal.woff2?bd03a2cc277bbbc338d464e679fe9942) format("woff2"), url(fonts/lato-normal.woff?27bd77b9162d388cb8d4c4217c7c5e2a) format("woff");
+    src: url(fonts/lato-normal.woff2) format("woff2"), url(fonts/lato-normal.woff) format("woff");
     font-weight: 400;
     font-style: normal;
     font-display:block
@@ -118,7 +150,7 @@ a:hover{
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato-bold.woff2?cccb897485813c7c256901dbca54ecf2) format("woff2"), url(fonts/lato-bold.woff?d878b6c29b10beca227e9eef4246111b) format("woff");
+    src: url(fonts/lato-bold.woff2) format("woff2"), url(fonts/lato-bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display:block
@@ -126,7 +158,7 @@ a:hover{
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato-bold-italic.woff2?0b6bb6725576b072c5d0b02ecdd1900d) format("woff2"), url(fonts/lato-bold-italic.woff?9c7e4e9eb485b4a121c760e61bc3707c) format("woff");
+    src: url(fonts/lato-bold-italic.woff2) format("woff2"), url(fonts/lato-bold-italic.woff) format("woff");
     font-weight: 700;
     font-style: italic;
     font-display:block
@@ -134,7 +166,7 @@ a:hover{
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato-normal-italic.woff2?4eb103b4d12be57cb1d040ed5e162e9d) format("woff2"), url(fonts/lato-normal-italic.woff?f28f2d6482446544ef1ea1ccc6dd5892) format("woff");
+    src: url(fonts/lato-normal-italic.woff2) format("woff2"), url(fonts/lato-normal-italic.woff) format("woff");
     font-weight: 400;
     font-style: italic;
     font-display:block
@@ -144,7 +176,7 @@ a:hover{
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: 400;
-    src: url(fonts/Roboto-Slab-Regular.woff2?7abf5b8d04d26a2cafea937019bca958) format("woff2"), url(fonts/Roboto-Slab-Regular.woff?c1be9284088d487c5e3ff0a10a92e58c) format("woff");
+    src: url(fonts/Roboto-Slab-Regular.woff2) format("woff2"), url(fonts/Roboto-Slab-Regular.woff) format("woff");
     font-display:block
 }
 
@@ -155,5 +187,6 @@ a:hover{
     src: url(fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe) format("woff2"), url(fonts/Roboto-Slab-Bold.woff?bed5564a116b05148e3b3bea6fb1162a) format("woff");
     font-display: block
 }
+
 
 
