@@ -1,0 +1,142 @@
+body{
+    background-color: rgb(252, 252, 252);
+    box-sizing: border-box;
+    color: rgb(64, 64, 64);
+    font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body > nav {
+    background-color: rgb(52, 49, 49);
+    color: rgb(155, 155, 155);
+    left: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 54px;
+    position: fixed;
+    top: 0px;
+    width: 300px!important;
+    z-index: 200;
+}
+
+body > div, body > footer {
+    margin-left: 300px!important;
+    padding: 5px 20px 5px 20px;
+}
+
+.navlinks {
+    background-color: rgb(41, 128, 185);
+    color: rgb(252, 252, 252)!important;
+    display: block;
+    padding: 20px 0 14px 0;
+    text-align: center;
+    width: 300px;
+    z-index: 200;
+}
+
+.navbar-brand >  a {
+    color: rgb(252, 252, 252)!important;
+    padding: 4px 6px;
+}
+
+.navbar-brand > a:hover, .navlinks > a:hover {
+    background-color:rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.navlinks > a {
+    /* color: rgb(85, 165, 217); */
+    display: inline-block;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    white-space: nowrap;
+    padding: 4px 6px;
+    margin-left: 5px;
+}
+
+a, a:visited {
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #337ab7;
+    border-radius:0;
+}
+
+.btn-link, .btn-link.active, .btn-link:active {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow:none
+}
+
+.btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
+    border-color:transparent
+}
+
+.btn-link:focus, .btn-link:hover {
+    color: #23527c;
+    background-color:transparent
+}
+
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-normal.woff2?bd03a2cc277bbbc338d464e679fe9942) format("woff2"), url(fonts/lato-normal.woff?27bd77b9162d388cb8d4c4217c7c5e2a) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display:block
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-bold.woff2?cccb897485813c7c256901dbca54ecf2) format("woff2"), url(fonts/lato-bold.woff?d878b6c29b10beca227e9eef4246111b) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display:block
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-bold-italic.woff2?0b6bb6725576b072c5d0b02ecdd1900d) format("woff2"), url(fonts/lato-bold-italic.woff?9c7e4e9eb485b4a121c760e61bc3707c) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display:block
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-normal-italic.woff2?4eb103b4d12be57cb1d040ed5e162e9d) format("woff2"), url(fonts/lato-normal-italic.woff?f28f2d6482446544ef1ea1ccc6dd5892) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display:block
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Roboto-Slab-Regular.woff2?7abf5b8d04d26a2cafea937019bca958) format("woff2"), url(fonts/Roboto-Slab-Regular.woff?c1be9284088d487c5e3ff0a10a92e58c) format("woff");
+    font-display:block
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe) format("woff2"), url(fonts/Roboto-Slab-Bold.woff?bed5564a116b05148e3b3bea6fb1162a) format("woff");
+    font-display: block
+}
+
