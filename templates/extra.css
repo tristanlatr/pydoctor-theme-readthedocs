@@ -111,7 +111,33 @@ a:hover{
 code, .pre, #childList > div .functionHeader,
 #splitTables > table tr td:nth-child(2), .fieldArg {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+code {
     background: transparent;
+}
+
+#childList > div {
+    margin 0;
+    border: 0;
+    padding-left: 0;
+}
+
+#childList > div .functionHeader {
+    background: rgb(240, 240, 240);
+
+    border-color: rgb(85, 85, 85) rgb(85, 85, 85) rgb(85, 85, 85) rgb(204, 204, 204);
+    border-image: none;
+    border-left: 3px solid rgb(204, 204, 204);
+    border-style: none none none solid;
+    border-width: 0px 0px 0px 3px;
+    margin: 0px 0px 6px;
+    padding: 6px;
+    position: relative;
+}
+
+.functionBody{
+    margin-left: 30px;
 }
 
 code > a, a.sourceLink {
@@ -126,8 +152,6 @@ code > a, a.sourceLink {
     border-style: solid;
     border-top: 2px solid rgb(225, 228, 229);
     border-width: 2px;
-
-
     padding: 2px 5px;
 }
 
