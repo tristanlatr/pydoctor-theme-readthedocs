@@ -38,9 +38,13 @@ body > div, body > footer {
     z-index: 200;
 }
 
+.navbar-brand {
+    display: block;
+}
+
 .navbar-brand >  a {
     color: rgb(252, 252, 252)!important;
-    padding: 4px 6px;
+    padding: 5px!important;
 }
 
 .navbar-brand > a:hover, .navlinks > a:hover {
@@ -49,14 +53,14 @@ body > div, body > footer {
 }
 
 .navlinks > a {
-    /* color: rgb(85, 165, 217); */
+    color: rgba(210, 239, 255, 1);
     display: inline-block;
-    font-weight: bold;
     height: 32px;
     line-height: 32px;
     white-space: nowrap;
-    padding: 4px 6px;
+    padding: 5px!important;
     margin-left: 5px;
+    margin-top: 5px
 }
 
 a, a:visited {
@@ -70,7 +74,7 @@ a:hover{
     cursor: pointer;
 }
 
-.btn-link {
+.btn-link, a {
     font-weight: 400;
     color: #337ab7;
     border-radius:0;
@@ -139,4 +143,5 @@ a:hover{
     src: url(fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe) format("woff2"), url(fonts/Roboto-Slab-Bold.woff?bed5564a116b05148e3b3bea6fb1162a) format("woff");
     font-display: block
 }
+
 
