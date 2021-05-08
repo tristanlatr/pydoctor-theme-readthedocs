@@ -166,6 +166,59 @@ code > a, a.sourceLink {
     padding: 6px;
 }
 
+/* Admonitions */
+
+div.rst-admonition p.rst-admonition-title:after {
+    content: ":";
+}
+
+div.rst-admonition p.rst-admonition-title {
+    -webkit-font-smoothing: antialiased;
+    background: rgb(106, 176, 222);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255)!important;
+    font: normal normal bold normal 18px/18px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    height: 30px;
+    margin: -12px -12px 12px;
+    margin-block-end: 12px;
+    margin-block-start: -12px;
+    margin-inline-end: -12px;
+    margin-inline-start: -12px;
+    padding: 6px 12px;
+    text-rendering: auto;
+}
+
+div.rst-admonition p.rst-admonition-title {
+    color: #333333;
+}
+
+div.rst-admonition {
+    color: rgb(64, 64, 64);
+    display: block;
+    font: normal normal normal normal 18px/24px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    margin: 0px 0px 24px;
+    padding: 12px;
+    border: 0;
+    border-radius:0;
+}
+
+div.warning, div.attention, div.danger, div.error, div.caution {
+    background-color: #ffcf9cb0;
+}
+
+div.danger p.rst-admonition-title, div.error p.rst-admonition-title, div.caution p.rst-admonition-title {
+    color: #b94a48;
+    background-color: #e87965b0;
+}
+
+div.tip p.rst-admonition-title, div.hint p.rst-admonition-title, div.important p.rst-admonition-title{
+    color: #3a87ad;
+}
+
+div.tip, div.hint, div.important {
+    background-color: #d9edf7;
+}
+
 @font-face {
     font-family: Lato;
     src: url(fonts/lato-normal.woff2) format("woff2"), url(fonts/lato-normal.woff) format("woff");
@@ -213,6 +266,7 @@ code > a, a.sourceLink {
     src: url(fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe) format("woff2"), url(fonts/Roboto-Slab-Bold.woff?bed5564a116b05148e3b3bea6fb1162a) format("woff");
     font-display: block
 }
+
 
 
 
