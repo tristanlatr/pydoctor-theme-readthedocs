@@ -27,6 +27,27 @@ body > div, body > footer {
     padding: 5px 40px 5px 40px;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column 
+    }
+    body > nav {
+        position: relative;
+        width: auto!important;
+    }
+    
+    body > div, body > footer {
+        margin-left: 0!important;
+        width: auto!important;
+    }
+    
+    .navlinks {
+        width: auto!important;
+    }
+    
+}
+
 .navlinks {
     background-color: rgb(41, 128, 185);
     color: rgb(252, 252, 252)!important;
@@ -135,7 +156,8 @@ code {
 
 code > a, a.sourceLink {
     background: rgb(255, 255, 255);
-    font-family: Menlo bold, Monaco bold, Consolas bold, "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-weight: bold;
     border: 2px solid rgb(225, 228, 229);
     border-bottom: 2px solid rgb(225, 228, 229);
     border-color: rgb(225, 228, 229);
@@ -275,7 +297,3 @@ pre{
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
-
-
-
-
