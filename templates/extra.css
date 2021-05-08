@@ -20,7 +20,6 @@ body > nav {
     position: fixed;
     top: 0px;
     width: 300px!important;
-    z-index: 200;
 }
 
 body > div, body > footer {
@@ -35,7 +34,6 @@ body > div, body > footer {
     padding: 20px 0 14px 0;
     text-align: center;
     width: 300px;
-    z-index: 200;
 }
 
 .navbar-brand {
@@ -118,7 +116,7 @@ code {
 }
 
 #childList > div {
-    margin 0;
+    margin: 0;
     border: 0;
     padding-left: 0;
 }
@@ -129,7 +127,6 @@ code {
     border-width: 0px 0px 0px 3px;
     margin: 0px 0px 6px;
     padding: 6px;
-    position: relative;
 }
 
 .functionBody{
