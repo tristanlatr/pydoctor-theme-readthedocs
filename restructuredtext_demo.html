@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>restructuredtext_demo</title>
+    <meta name="generator" content="pydoctor 21.2.2"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default">
+  
+  <div class="container">
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+          <span class="navbar-brand">
+            <a href="https://github.com/tristanlatr/pydoctor-theme-readthedocs/" class="projecthome">pydoctor-theme-readthedocs</a> <a href="index.html">API Documentation</a>
+          </span>
+
+          <a href="moduleIndex.html">
+            Modules
+          </a>
+
+          <a href="classIndex.html">
+            Classes
+          </a>
+
+          <a href="nameIndex.html">
+            Names
+          </a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+    
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="package"><code><code><a href="restructuredtext_demo.html">restructuredtext_demo</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        package documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <a href="https://github.com/twisted/pydoctor/tree/master/.tox/pydoctor/docs/restructuredtext_demo/__init__.py" class="sourceLink">(source)</a>
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Few general reStructuredText formating markups are documented here.</p>
+<p>reStructuredText code related formating are demonstrated in the <code><a href="restructuredtext_demo.demo_restructuredtext_module.html">demo_restructuredtext_module</a></code>.</p>
+<p>Many examples are copied from <a class="rst-reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html" target="_top">the docutils quickref</a>.</p>
+<div class="rst-section" id="rst-scope-and-purpose">
+<h1 class="heading">Scope and Purpose</h1>
+<p>Sample package for describing and demonstrating <tt class="rst-docutils literal">pydoctor</tt> HTML API rendering for <strong>reStructuredText</strong> based documentation.</p>
+<p>Try to keep the example as condensed as possible.</p>
+<ul class="rst-simple">
+<li>Make  it easy to review HTML rendering.</li>
+<li>Cover all most common reStructuredText markup.
+Like the usage of list with various indentation types.</li>
+<li>Have it build as part of our continuous integration tests.
+To ensure we don't introduce regressions.</li>
+</ul>
+<div class="rst-admonition note">
+<p class="rst-first rst-admonition-title">Note</p>
+<p class="rst-last">Even if most of the structural (i.e. not inline) reST markup appears to ressemble Epytext markup,
+blank lines are often needed where Epytext allowed no blank line after parent element. Indentation
+is also much more important, lists content and child items must be correctly indented.</p>
+</div>
+</div>
+<div class="rst-section" id="rst-lists">
+<h1 class="heading">Lists</h1>
+<p>reStructuredText supports both ordered and unordered lists.
+A list consists of one or more consecutive list items with the same indentation.
+Each list item is marked by a bullet.
+The bullet for unordered list items is a single dash character (<tt class="rst-docutils literal">-</tt>).
+Bullets for ordered list items consist of a series of numbers followed by periods,
+such as <tt class="rst-docutils literal">12.</tt> or <tt class="rst-docutils literal">1.2.8.</tt>.</p>
+<p>Ordered list example:</p>
+<ol class="rst-arabic simple">
+<li>This is an ordered list item.</li>
+<li>This is a another ordered list
+item.</li>
+<li>This is a third list item.  Note that
+the paragraph may be indented more
+than the bullet.</li>
+</ol>
+<p>Example of unordered list:</p>
+<ul class="rst-simple">
+<li>This is an ordered list item.</li>
+<li>This is a another ordered list
+item.</li>
+</ul>
+<p>Example of complex list:</p>
+<ol class="rst-arabic">
+<li><p class="rst-first">This is a list item.</p>
+<ul class="rst-simple">
+<li>This is a sublist.</li>
+<li>The sublist contains two
+items.<ul>
+<li>The second item of the
+sublist has its own sublist.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><dl class="rst-first rst-docutils">
+<dt>This list item contains two</dt>
+<dd><p class="rst-first">paragraphs and a doctest block.</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-builtin">print</span> <span class="py-string">'This is a doctest block'</span>
+<span class="py-output">This is a doctest block</span>
+</pre><p class="rst-last">This is the second paragraph.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="rst-section" id="rst-literal-blocks">
+<h1 class="heading">Literal Blocks</h1>
+<p>Literal blocks are used to represent "preformatted" text.
+Everything within a literal block should be displayed exactly as it appears in plaintext.</p>
+<ul class="rst-simple">
+<li>Spaces and newlines are preserved.</li>
+<li>Text is shown in a monospaced font.</li>
+<li>Inline markup is not detected.</li>
+</ul>
+<p>Literal blocks are introduced by paragraphs ending in the special sequence <tt class="rst-docutils literal">::</tt>.
+Literal blocks end at the first line whose indentation is equal to or less than that of the paragraph that introduces them.</p>
+<p>The following is a literal block:</p>
+<pre class="rst-literal-block">
+Literal /
+       / **Block**
+</pre>
+</div>
+<div class="rst-section" id="rst-doctest-blocks">
+<h1 class="heading">Doctest Blocks</h1>
+<ul class="rst-simple">
+<li>contain examples consisting of Python expressions and their output</li>
+<li>can be used by the doctest module to test the documented object</li>
+<li>begin with the special sequence <tt class="rst-docutils literal">&gt;&gt;&gt;</tt></li>
+<li>are delimited from surrounding blocks by blank lines</li>
+<li>may not contain blank lines</li>
+</ul>
+<p>The following is a doctest block inside a block quote (automatically added because of indentation):</p>
+<blockquote>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-builtin">print</span> (1+3,
+<span class="py-more">... </span>       3+5)
+<span class="py-output">(4, 8)</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-string">'a-b-c-d-e'</span>.split(<span class="py-string">'-'</span>)
+<span class="py-output">['a', 'b', 'c', 'd', 'e']</span>
+</pre></blockquote>
+<p>This is a paragraph following the doctest block.</p>
+</div>
+<div class="rst-section" id="rst-python-code-blocks">
+<h1 class="heading">Python code Blocks</h1>
+<p>Using reStructuredText markup it is possible to specify Python code snippets in a <tt class="rst-docutils literal">.. python::</tt> directive .</p>
+<p>If the Python prompt gets in your way when you try to copy and paste and you are not interested in self-testing docstrings,
+the</p>
+<p>This will let you obtain a simple block of colorized text:</p>
+<pre class="py-doctest">
+<span class="py-keyword">def</span> <span class="py-defname">fib</span>(n):
+    <span class="py-string">'''Print a Fibonacci series.'''</span>
+    a, b = 0, 1
+    <span class="py-keyword">while</span> b &lt; n:
+        <span class="py-builtin">print</span> b,
+        a, b = b, a+b</pre></div>
+<div class="rst-section" id="rst-inline-markup">
+<h1 class="heading">Inline Markup</h1>
+<p>reStructuredText defines a lot of inline markup, here's a few of the most common:</p>
+<ul class="rst-simple">
+<li><em>Italicized text</em></li>
+<li><strong>Bold-faced text</strong></li>
+<li><tt class="rst-docutils literal">Source code</tt></li>
+<li><code><a href="https://docs.python.org/3/library/subprocess.html#subprocess.Popen">subprocess.Popen</a></code> (Interpreted text: used for cross-referencing python objects)</li>
+</ul>
+<div class="rst-admonition note">
+<p class="rst-first rst-admonition-title">Note</p>
+<p>Inline markup cannot be nested.
+A workaround is to use the <tt class="rst-docutils literal">.. replace::</tt> directive:</p>
+<p class="rst-last">I recommend you try <a class="rst-reference external" href="http://www.python.org/" target="_top"><strong>Python</strong>, <em>the</em> best language around</a>.</p>
+</div>
+</div>
+<div class="rst-section" id="rst-urls">
+<h1 class="heading">URLs</h1>
+<p>The inline markup construct <tt class="rst-docutils literal">`text <span class="pre">&lt;url&gt;`_</span></tt> is used to create links to external URLs and URIs.
+'text' is the text that should be displayed for the link, and 'url' is the target of the link.
+If you wish to use the URL as the text for the link, you can simply write the URL as is.</p>
+<p>The following example illustrates how URLs can be used:</p>
+<ul class="rst-simple">
+<li><a class="rst-reference external" href="http://www.python.org" target="_top">http://www.python.org</a> (A standalone hyperlink.)</li>
+<li><a class="rst-reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html" target="_top">docutils quickref</a></li>
+<li>External hyperlinks with substitution, like <a class="rst-reference external" href="http://www.python.org/" target="_top">Python</a>.</li>
+</ul>
+</div>
+<div class="rst-section" id="rst-admonitions">
+<h1 class="heading">Admonitions</h1>
+<div class="rst-admonition note">
+<p class="rst-first rst-admonition-title">Note</p>
+<p class="rst-last">This is just a info.</p>
+</div>
+<div class="rst-admonition tip">
+<p class="rst-first rst-admonition-title">Tip</p>
+<p class="rst-last">This is good for you.</p>
+</div>
+<div class="rst-admonition hint">
+<p class="rst-first rst-admonition-title">Hint</p>
+<p class="rst-last">This too.</p>
+</div>
+<div class="rst-admonition important">
+<p class="rst-first rst-admonition-title">Important</p>
+<p class="rst-last">Important information here.</p>
+</div>
+<div class="rst-admonition warning">
+<p class="rst-first rst-admonition-title">Warning</p>
+<p class="rst-last">This should be taken seriouly.</p>
+</div>
+<div class="rst-admonition attention">
+<p class="rst-first rst-admonition-title">Attention</p>
+<p class="rst-last">Beware.</p>
+</div>
+<div class="rst-admonition caution">
+<p class="rst-first rst-admonition-title">Caution</p>
+<p class="rst-last">This should be taken very seriouly.</p>
+</div>
+<div class="rst-admonition danger">
+<p class="rst-first rst-admonition-title">Danger</p>
+<p class="rst-last">This function is a security whole!</p>
+</div>
+<div class="rst-admonition error">
+<p class="rst-first rst-admonition-title">Error</p>
+<p class="rst-last">This is not right.</p>
+</div>
+<style>
+    .rst-admonition-purple {
+        background-color: plum ! important;
+    }
+    .rst-admonition-purple p.rst-admonition-title{
+        color: purple ! important;
+    }
+</style><div class="rst-admonition rst-admonition-purple">
+<p class="rst-first rst-admonition-title">Purple</p>
+<p>This needs additionnal CSS for the new "rst-admonition-purple" class.
+Include additional CSS by defining a raw block:</p>
+<pre class="rst-literal-block">
+.. raw:: html
+
+&lt;style&gt;
+    .rst-admonition-purple {
+        background-color: plum ! important;
+    }
+    .rst-admonition-purple p.rst-admonition-title{
+        color: purple ! important;
+    }
+&lt;/style&gt;
+</pre>
+<div class="rst-last rst-admonition note">
+<p class="rst-first rst-admonition-title">Note</p>
+<p class="rst-last">The <tt class="rst-docutils literal">! important</tt> is required to overrride <tt class="rst-docutils literal">apidocs.css</tt>.</p>
+</div>
+</div>
+</div>
+<div class="rst-section" id="rst-symbols">
+<h1 class="heading">Symbols</h1>
+<p>Any symbol can be rendered with the <tt class="rst-docutils literal">.. unicode::</tt> directive.</p>
+<p>Copyright © 2021, MojoInc™—all rights reserved.</p>
+<!-- with trademark sign -->
+</div>
+<div class="rst-section" id="rst-comments">
+<h1 class="heading">Comments</h1>
+<p>This is a commented warning:</p>
+<pre class="rst-literal-block">
+.. .. warning:: This should not be used!
+</pre>
+<!-- .. warning:: This should not be used! -->
+</div>
+<div class="rst-section" id="rst-escaping">
+<h1 class="heading">Escaping</h1>
+<p>Escaping is used to write text that would otherwise be interpreted as reStructuredText markup.
+ReStructuredText handles escaping with the backslash character.</p>
+<p>thisis<em>one</em>word.</p>
+<div class="rst-admonition note">
+<p class="rst-first rst-admonition-title">Note</p>
+<p class="rst-last">The docstring must be declared as a raw docstring: with the <tt class="rst-docutils literal">r</tt> prefix to prevent Python to interpret the backslashes.</p>
+</div>
+<p>See more on escaping on <a class="rst-reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#escaping-mechanism" target="_top">docutils documentation page</a></p>
+</div>
+</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1">
+  
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><code><a href="restructuredtext_demo.demo_restructuredtext_module.html">demo_restructuredtext_module</a></code></td>
+    <td><span>This is a module demonstrating reST code documentation features.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        
+
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/tristanlatr/pydoctor-theme-readthedocs/" class="projecthome">pydoctor-theme-readthedocs</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    21.2.2 at 2021-05-08 21:10:28.
+  </div>
+</footer>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

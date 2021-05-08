@@ -1,0 +1,281 @@
+body{
+    background-color: rgb(252, 252, 252);
+    box-sizing: border-box;
+    color: rgb(64, 64, 64);
+    font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body > nav {
+    background-color: rgb(52, 49, 49);
+    color: rgb(155, 155, 155);
+    left: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 54px;
+    position: fixed;
+    top: 0px;
+    width: 300px!important;
+}
+
+body > div, body > footer {
+    margin-left: 300px!important;
+    padding: 5px 40px 5px 40px;
+}
+
+.navlinks {
+    background-color: rgb(41, 128, 185);
+    color: rgb(252, 252, 252)!important;
+    display: block;
+    padding: 20px 0 14px 0;
+    text-align: center;
+    width: 300px;
+}
+
+.navbar-brand {
+    display: block;
+}
+
+.navbar-brand >  a {
+    color: rgb(252, 252, 252)!important;
+    padding: 5px!important;
+}
+
+.navbar-brand > a:hover, .navlinks > a:hover {
+    background-color:rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.navlinks > a {
+    color: rgba(210, 239, 255, 1);
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    white-space: nowrap;
+    padding: 5px!important;
+    margin-left: 5px;
+    margin-top: 5px
+}
+
+a, a:visited {
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-link, a {
+    font-weight: 400;
+    color: #337ab7;
+    border-radius:0;
+}
+
+.btn-link, .btn-link.active, .btn-link:active {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow:none
+}
+
+.btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
+    border-color:transparent
+}
+
+.btn-link:focus, .btn-link:hover {
+    color: #23527c;
+    background-color:transparent
+}
+
+
+#splitTables > table {
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    border: 1px solid rgb(210, 220, 216);
+    border-bottom: 0;
+    vertical-align: middle;
+}
+
+#splitTables > table td {
+    border-bottom: 1px solid rgb(210, 220, 216);
+}
+
+code, .pre, #childList > div .functionHeader,
+#splitTables > table tr td:nth-child(2), .fieldArg {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+code {
+    background: transparent;
+}
+
+#childList > div {
+    margin: 0;
+    border: 0;
+    padding-left: 0;
+}
+
+#childList > div .functionHeader {
+    background: rgb(240, 240, 240);
+    border-left: 3px solid rgb(204, 204, 204);
+    border-width: 0px 0px 0px 3px;
+    margin: 0px 0px 6px;
+    padding: 6px;
+}
+
+.functionBody{
+    margin-left: 30px;
+}
+
+code > a, a.sourceLink {
+    background: rgb(255, 255, 255);
+    font-family: Menlo bold, Monaco bold, Consolas bold, "Courier New", monospace;
+    border: 2px solid rgb(225, 228, 229);
+    border-bottom: 2px solid rgb(225, 228, 229);
+    border-color: rgb(225, 228, 229);
+    border-left: 2px solid rgb(225, 228, 229);
+    border-right: 2px solid rgb(225, 228, 229);
+    border-style: solid;
+    border-top: 2px solid rgb(225, 228, 229);
+    border-width: 2px;
+    padding: 2px 5px;
+}
+
+/* top navagation bar */
+.page-header > h1 {
+    margin-top: 0;
+}
+.page-header > h1 > code {
+    color: #971c3a;
+}
+
+.extrasDocstring > p:first-child{
+    background: rgb(231, 242, 250);
+    border-top: 3px solid rgb(106, 176, 222);
+    display: table;
+    margin: 0px 0px 6px;
+    padding: 6px;
+}
+
+/* Admonitions */
+
+div.rst-admonition p.rst-admonition-title:after {
+    content: ":";
+}
+
+div.rst-admonition p.rst-admonition-title {
+    -webkit-font-smoothing: antialiased;
+    background: rgb(106, 176, 222);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255)!important;
+    font: normal normal bold normal 18px/18px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    height: 30px;
+    margin: -12px -12px 12px;
+    margin-block-end: 12px;
+    margin-block-start: -12px;
+    margin-inline-end: -12px;
+    margin-inline-start: -12px;
+    padding: 6px 12px;
+    text-rendering: auto;
+}
+
+div.rst-admonition p.rst-admonition-title {
+    color: #333333;
+}
+
+div.rst-admonition {
+    color: rgb(64, 64, 64);
+    display: block;
+    font: normal normal normal normal 18px/24px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    margin: 0px 0px 24px;
+    padding: 12px;
+    border: 0;
+    border-radius:0;
+}
+
+div.warning, div.attention, div.danger, div.error, div.caution {
+    background-color: #ffcf9cb0;
+}
+
+div.danger p.rst-admonition-title, div.error p.rst-admonition-title, div.caution p.rst-admonition-title {
+    color: #b94a48;
+    background-color: #e87965b0;
+}
+
+div.tip p.rst-admonition-title, div.hint p.rst-admonition-title, div.important p.rst-admonition-title{
+    color: #3a87ad;
+}
+
+div.tip, div.hint, div.important {
+    background-color: #d9edf7;
+}
+
+pre{
+    box-sizing: border-box;
+    color: rgb(64, 64, 64);
+    display: block;
+    font: normal normal normal normal 18px/24px SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
+    overflow: auto;
+    padding: 12px;border: 1px solid rgb(225, 228, 229);
+    white-space: pre;
+    background: rgb(248, 248, 248);
+    
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-normal.woff2) format("woff2"), url(fonts/lato-normal.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display:block
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-bold.woff2) format("woff2"), url(fonts/lato-bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display:block
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-bold-italic.woff2) format("woff2"), url(fonts/lato-bold-italic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display:block
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/lato-normal-italic.woff2) format("woff2"), url(fonts/lato-normal-italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display:block
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Roboto-Slab-Regular.woff2) format("woff2"), url(fonts/Roboto-Slab-Regular.woff) format("woff");
+    font-display:block
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe) format("woff2"), url(fonts/Roboto-Slab-Bold.woff?bed5564a116b05148e3b3bea6fb1162a) format("woff");
+    font-display: block
+}
+
+
+
+
