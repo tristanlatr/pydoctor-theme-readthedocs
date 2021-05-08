@@ -1,7 +1,7 @@
 ReadTheDocs theme for pydoctor
 ==============================
 
-Unrealesed yet, in development.
+Unreleased yet, do not use until next major version of Pydoctor.
 
 This repository contains a collection of template files that can be used with `pydoctor <https://github.com/twisted/pydoctor>`_ to output ReadTheDocs-like HTML.
 
