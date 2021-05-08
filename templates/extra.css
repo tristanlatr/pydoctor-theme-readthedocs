@@ -125,11 +125,7 @@ code {
 
 #childList > div .functionHeader {
     background: rgb(240, 240, 240);
-
-    border-color: rgb(85, 85, 85) rgb(85, 85, 85) rgb(85, 85, 85) rgb(204, 204, 204);
-    border-image: none;
     border-left: 3px solid rgb(204, 204, 204);
-    border-style: none none none solid;
     border-width: 0px 0px 0px 3px;
     margin: 0px 0px 6px;
     padding: 6px;
@@ -146,7 +142,6 @@ code > a, a.sourceLink {
     border: 2px solid rgb(225, 228, 229);
     border-bottom: 2px solid rgb(225, 228, 229);
     border-color: rgb(225, 228, 229);
-    border-image: none;
     border-left: 2px solid rgb(225, 228, 229);
     border-right: 2px solid rgb(225, 228, 229);
     border-style: solid;
@@ -163,6 +158,13 @@ code > a, a.sourceLink {
     color: #971c3a;
 }
 
+.extrasDocstring > p:first-child{
+    background: rgb(231, 242, 250);
+    border-top: 3px solid rgb(106, 176, 222);
+    display: table;
+    margin: 0px 0px 6px;
+    padding: 6px;
+}
 
 @font-face {
     font-family: Lato;
