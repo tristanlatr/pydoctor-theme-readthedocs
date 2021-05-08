@@ -12,10 +12,7 @@ Clone this repository and use::
 
     pydoctor --template-dir=pydoctor-theme-readthedocs/templates ...
 
-
 Demo
 ----
 
-Soon.
-
-.. `Click here <>`_
+`Here <https://tristanlatr.github.io/pydoctor-theme-readthedocs/index.html>`_
