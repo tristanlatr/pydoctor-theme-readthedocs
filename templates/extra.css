@@ -195,7 +195,7 @@ code {
     margin-left: 30px;
 }
 
-code > a, a.sourceLink {
+code > a {
     background: rgb(255, 255, 255);
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     border: 2px solid rgb(225, 228, 229);
@@ -211,6 +211,8 @@ code > a, a.sourceLink {
 
 .sourceLink {
     font-size: 14px;
+    border: 0;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /* Class definition block */ 
@@ -333,3 +335,4 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
