@@ -40,13 +40,26 @@ body > div, body > footer {
     padding: 10px 0 5px 0;
 }
 .page-header > h1 {
-    margin-top: 0;
     font-size: 22px;
-    font-weight: bold;
     padding-left: 15px;
 }
+
 .page-header > h1 code {
     padding: 0;
+}
+
+
+/* Titles */
+
+p.caption, h1, h2, h3, h4, h5, h6, legend, .categoryHeader {
+
+    font-weight: bold;
+    font-family: Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif;
+}
+
+.categoryHeader{
+    font-size: 20px;
+    margin: 10px 0 20px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -316,8 +329,3 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
-
-
-
-
-
