@@ -45,15 +45,42 @@ body > footer {
     width: calc(100% + 80px);
     padding: 10px 0 5px 0;
 }
+/* xref stlyles */
+
+code > a {
+    background: rgb(255, 255, 255);
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    border: 2px solid rgb(225, 228, 229);
+    border-bottom: 2px solid rgb(225, 228, 229);
+    border-color: rgb(225, 228, 229);
+    border-left: 2px solid rgb(225, 228, 229);
+    border-right: 2px solid rgb(225, 228, 229);
+    border-style: solid;
+    border-top: 2px solid rgb(225, 228, 229);
+    border-width: 2px;
+    padding: 2px 5px;
+    font-size: 14px;
+}
+
+.sourceLink {
+    font-size: 14px;
+    border: 0;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Header */ 
+
 .page-header > h1 {
-    font-size: 22px;
+    font-size: 16px;
     padding-left: 15px;
 }
 
 .page-header > h1 code {
     padding: 0;
 }
-
+.page-header > h1 code > a {
+    font-size: 16px;
+}
 
 /* Titles */
 
@@ -65,7 +92,7 @@ p.caption, h1, h2, h3, h4, h5, h6, legend, .categoryHeader {
 
 .categoryHeader{
     font-size: 20px;
-    margin: 10px 0 20px 0;
+    margin: 15px 0 20px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -201,25 +228,7 @@ code {
     margin-left: 30px;
 }
 
-code > a {
-    background: rgb(255, 255, 255);
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    border: 2px solid rgb(225, 228, 229);
-    border-bottom: 2px solid rgb(225, 228, 229);
-    border-color: rgb(225, 228, 229);
-    border-left: 2px solid rgb(225, 228, 229);
-    border-right: 2px solid rgb(225, 228, 229);
-    border-style: solid;
-    border-top: 2px solid rgb(225, 228, 229);
-    border-width: 2px;
-    padding: 2px 5px;
-}
 
-.sourceLink {
-    font-size: 14px;
-    border: 0;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
 
 /* Class definition block */ 
 
@@ -304,7 +313,12 @@ pre {
 }
 
 #splitTables > table tr td:nth-child(2) {
-    width: 225px;
+    width: 250px;
+}
+@media only screen and (max-width: 1000px){
+    #splitTables > table tr td:nth-child(2) {
+        width: 35%;
+    }
 }
 
 @font-face {
@@ -354,6 +368,3 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
-
-
-
