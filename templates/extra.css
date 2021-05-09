@@ -303,6 +303,10 @@ pre {
     background: rgb(248, 248, 248);
 }
 
+#splitTables > table tr td:nth-child(2) {
+    width: 225px;
+}
+
 @font-face {
     font-family: Lato;
     src: url(fonts/lato-normal.woff2) format("woff2"), url(fonts/lato-normal.woff) format("woff");
