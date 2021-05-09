@@ -3,7 +3,7 @@ body {
     box-sizing: border-box;
     color: rgb(64, 64, 64);
     font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     margin: 0;
     min-height: 100%;
     overflow-x: hidden;
@@ -37,18 +37,16 @@ body > div, body > footer {
     margin-top: 0;
     margin-left: -40px;
     width: calc(100% + 80px);
-    padding: 5px 0 5px 0;
+    padding: 10px 0 5px 0;
 }
 .page-header > h1 {
     margin-top: 0;
     font-size: 22px;
     font-weight: bold;
+    padding-left: 15px;
 }
 .page-header > h1 code {
     padding: 0;
-}
-.page-header > h1 code:first-child{
-    padding-left: 5px
 }
 
 @media screen and (max-width: 768px) {
@@ -318,6 +316,8 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
+
 
 
 
