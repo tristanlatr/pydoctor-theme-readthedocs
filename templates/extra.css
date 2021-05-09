@@ -172,9 +172,13 @@ code > a, a.sourceLink {
 /* top navagation bar */
 
 .page-header {
-    border: 1px solid rgb(210, 220, 216);
-    background-color: rgb(241, 241, 241);box-shadow: none;
-    margin-top: 0;margin-left: -40px;width: calc(100% + 80px);padding: 5px 5px 0 5px;
+    border-bottom: 1px solid rgb(210, 220, 216);
+    background-color: rgb(241, 241, 241);
+    box-shadow: none;
+    margin-top: 0;
+    margin-left: -32px;
+    width: calc(100% + 80px);
+    padding: 5px 0 5px 0;
 }
 .page-header > h1 {
     margin-top: 0;
@@ -303,4 +307,5 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
 
