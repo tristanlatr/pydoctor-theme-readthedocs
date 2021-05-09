@@ -237,7 +237,6 @@ div.rst-admonition p.rst-admonition-title {
     box-sizing: border-box;
     color: rgb(255, 255, 255)!important;
     font: normal normal bold normal 18px/18px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
-    height: 30px;
     margin: -12px -12px 12px;
     margin-block-end: 12px;
     margin-block-start: -12px;
@@ -259,15 +258,25 @@ div.rst-admonition {
     padding: 12px;
     border: 0;
     border-radius:0;
+    
 }
 
-div.warning, div.attention, div.danger, div.error, div.caution {
-    background-color: #ffcf9cb0;
+div.danger, div.error, div.caution {
+    background-color: #fdf3f2;
+}
+
+div.warning, div.attention{
+    background-color: #ffedcc;
 }
 
 div.danger p.rst-admonition-title, div.error p.rst-admonition-title, div.caution p.rst-admonition-title {
-    color: #b94a48;
-    background-color: #e87965b0;
+    /* color: #b94a48; */
+    background-color: #f29f97;
+}
+
+div.attention p.rst-admonition-title, div.warning p.rst-admonition-title {
+/* color: #b94a48; */
+background-color: #f0b37e;
 }
 
 div.tip p.rst-admonition-title, div.hint p.rst-admonition-title, div.important p.rst-admonition-title{
@@ -335,4 +344,5 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
 
