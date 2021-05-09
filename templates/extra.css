@@ -209,6 +209,10 @@ code > a, a.sourceLink {
     padding: 2px 5px;
 }
 
+.sourceLink {
+    font-size: 14px;
+}
+
 /* Class definition block */ 
 
 .extrasDocstring > p:first-child{
