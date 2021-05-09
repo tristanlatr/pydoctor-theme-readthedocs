@@ -1,9 +1,9 @@
-body{
+body {
     background-color: rgb(252, 252, 252);
     box-sizing: border-box;
     color: rgb(64, 64, 64);
     font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     margin: 0;
     min-height: 100%;
     overflow-x: hidden;
@@ -24,7 +24,7 @@ body > nav {
 
 body > div, body > footer {
     margin-left: 300px!important;
-    padding: 5px 40px 5px 40px;
+    padding: 0 40px 0 40px;
 }
 
 @media screen and (max-width: 768px) {
@@ -40,6 +40,7 @@ body > div, body > footer {
     body > div, body > footer {
         margin-left: 0!important;
         width: auto!important;
+        padding: 5px 15px 5px 15px;
     }
     
     .navlinks {
@@ -157,7 +158,6 @@ code {
 code > a, a.sourceLink {
     background: rgb(255, 255, 255);
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-weight: bold;
     border: 2px solid rgb(225, 228, 229);
     border-bottom: 2px solid rgb(225, 228, 229);
     border-color: rgb(225, 228, 229);
@@ -170,8 +170,16 @@ code > a, a.sourceLink {
 }
 
 /* top navagation bar */
+
+.page-header {
+    border: 1px solid rgb(210, 220, 216);
+    background-color: rgb(241, 241, 241);box-shadow: none;
+    margin-top: 0;margin-left: -40px;width: calc(100% + 80px);padding: 5px 5px 0 5px;
+}
 .page-header > h1 {
     margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
 }
 .page-header > h1 > code {
     color: #971c3a;
@@ -295,3 +303,4 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
