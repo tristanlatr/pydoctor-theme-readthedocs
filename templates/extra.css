@@ -14,10 +14,8 @@ body > nav {
     background-color: rgb(52, 49, 49);
     color: rgb(155, 155, 155);
     left: 0px;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding-bottom: 54px;
+    height: 100vh;
+
     position: fixed;
     top: 0px;
     width: 300px!important;
@@ -26,7 +24,7 @@ body > nav {
 body > div, body > footer {
     margin-left: 300px!important;
     padding: 0 40px 0 40px;
-    background-color: rgb(252, 252, 252)!important;
+    background-color: rgb(252, 252, 252)!important;width: calc(100% - 380px)!important;
 }
 
 body > footer {
@@ -321,18 +319,43 @@ pre {
     background: rgb(248, 248, 248);
 }
 
+/* Summary tables */
+
 #splitTables > table tr td:nth-child(2) {
     width: 250px;
-}
-
-#main {
-    margin-left:0!important;
 }
 
 @media only screen and (max-width: 1000px){
     #splitTables > table tr td:nth-child(2) {
         width: 35%;
     }
+}
+
+/* Sidebar */
+
+#main {
+    margin-left:0!important;
+}
+
+.sidebarcontainer {
+    width: 295px;
+    border-radius: 0;border: 0;
+    /* height: auto; */
+    height: 100%;
+    position: relative;
+    display: block;
+    margin-right: 0;
+    margin-top: 0;
+    /* bottom: 0; */
+}
+
+.sidebarcontainer code > a {
+    border: 0;
+}
+
+.thingTitle code.thisobject > a {
+    font-weight: bold;
+    padding-left: 0;
 }
 
 @font-face {
