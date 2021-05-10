@@ -43,7 +43,7 @@ body > footer {
     margin-top: 0;
     margin-left: -40px;
     width: calc(100% + 80px);
-    padding: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
     position: relative;
 }
 /* xref stlyles */
@@ -72,13 +72,14 @@ code > a {
 /* Header */ 
 
 .page-header > h1 {
-    font-size: 16px;
     padding-left: 15px;
-    margin-top: 7px;
+    margin-top: 5px;
+    display: flex;
 }
 
 .page-header > h1 code {
     padding: 0;
+    font-size: 16px;
 }
 .page-header > h1 code > a {
     font-size: 16px;
@@ -89,13 +90,18 @@ code > a {
 p.caption, h1, h2, h3, h4, h5, h6, legend, .categoryHeader {
 
     font-weight: bold;
-    font-family: Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif;
+    font-family: "Roboto Slab",Georgia,Arial,sans-serif;
 }
 
 .categoryHeader{
     font-size: 20px;
     margin: 15px 0 20px 0;
 }
+
+/* Remove anchor hack */
+a[name] {
+    position: initial;
+} 
 
 @media screen and (max-width: 768px) {
     body {
@@ -230,8 +236,6 @@ code {
     margin-left: 30px;
 }
 
-
-
 /* Class definition block */ 
 
 .extrasDocstring > p:first-child{
@@ -253,7 +257,6 @@ div.rst-admonition p.rst-admonition-title {
     background: rgb(106, 176, 222);
     box-sizing: border-box;
     color: rgb(255, 255, 255)!important;
-    font: normal normal bold normal 18px/18px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
     margin: -12px -12px 12px;
     margin-block-end: 12px;
     margin-block-start: -12px;
@@ -269,8 +272,6 @@ div.rst-admonition p.rst-admonition-title {
 
 div.rst-admonition {
     color: rgb(64, 64, 64);
-    display: block;
-    font: normal normal normal normal 18px/24px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
     margin: 0px 0px 24px;
     padding: 12px;
     border: 0;
@@ -336,22 +337,6 @@ pre {
     src: url(fonts/lato-bold.woff2) format("woff2"), url(fonts/lato-bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display:block
-}
-
-@font-face {
-    font-family: Lato;
-    src: url(fonts/lato-bold-italic.woff2) format("woff2"), url(fonts/lato-bold-italic.woff) format("woff");
-    font-weight: 700;
-    font-style: italic;
-    font-display:block
-}
-
-@font-face {
-    font-family: Lato;
-    src: url(fonts/lato-normal-italic.woff2) format("woff2"), url(fonts/lato-normal-italic.woff) format("woff");
-    font-weight: 400;
-    font-style: italic;
     font-display:block
 }
 
