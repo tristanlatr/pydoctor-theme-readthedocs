@@ -323,8 +323,11 @@ pre {
 
 /* Summary tables */
 
+#splitTables > table tr td:nth-child(1) {
+    width: 130px;
+}
 #splitTables > table tr td:nth-child(2) {
-    width: 250px;
+    width: 300px;
 }
 
 @media only screen and (max-width: 1000px){
