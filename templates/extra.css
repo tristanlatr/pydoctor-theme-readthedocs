@@ -19,6 +19,8 @@ body > nav {
     position: fixed;
     top: 0px;
     width: 300px!important;
+    display: flex;
+    flex-direction: column;
 }
 
 body > div, body > footer {
@@ -341,12 +343,13 @@ pre {
     width: 295px;
     border-radius: 0;border: 0;
     /* height: auto; */
-    height: 100%;
-    position: relative;
+    height: auto;
+    position: relative
     display: block;
     margin-right: 0;
-    margin-top: 0;
-    /* bottom: 0; */
+    margin-top: 0;/* margin-bottom: 100px; */
+    background-color: transparent;
+    scrollbar-width: 0;
 }
 
 .sidebarcontainer code > a {
@@ -356,6 +359,27 @@ pre {
 .thingTitle code.thisobject > a {
     font-weight: bold;
     padding-left: 0;
+}
+
+.sidebar a {
+    color: #d9d9d9;
+}
+
+.sidebar .childrenKindTitle, .sidebar span{
+    color: rgb(85, 165, 217);
+    display: inline;
+    font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+}
+.sidebar .childrenKindTitle{
+    border-bottom: 0;
+}
+.tocChildrenToggle:checked + .lbl-toggle, .lbl-toggle:hover {
+    color: rgb(85, 165, 217);
+}
+
+.sidebarcontainer::-webkit-scrollbar {
+    width: 0;
 }
 
 @font-face {
@@ -389,3 +413,4 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
