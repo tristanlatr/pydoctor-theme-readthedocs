@@ -14,7 +14,7 @@ body > nav {
     background-color: rgb(52, 49, 49);
     color: rgb(155, 155, 155);
     left: 0px;
-    height: 100vh;
+    height: 100%;
 
     position: fixed;
     top: 0px;
@@ -109,32 +109,7 @@ a[name] {
     position: initial;
 } 
 
-@media screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column 
-    }
-    body > nav {
-        position: relative;
-        width: auto!important;
-    }
-    
-    body > div, body > footer {
-        margin-left: 0!important;
-        width: auto!important;
-        padding: 5px 15px 5px 15px;
-    }
-    
-    .navlinks {
-        width: auto!important;
-    }
-    .page-header {
-        margin-left: -15px;
-        margin-top: -5px;
-        width: calc(100% + 30px);
-    }
-    
-}
+
 
 .navlinks {
     background-color: rgb(41, 128, 185);
@@ -343,15 +318,19 @@ pre {
 }
 
 .sidebarcontainer {
-    width: 295px;
+    width: 100%;
     border-radius: 0;border: 0;
     /* height: auto; */
     height: auto;
-    position: relative
+    position: relative;
     display: block;
     margin-right: 0;
-    margin-top: 0;/* margin-bottom: 100px; */
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 0px;
     background-color: transparent;
+    padding-left: 0;
+    padding-top: 25px;
     scrollbar-width: 0;
 }
 
@@ -359,13 +338,30 @@ pre {
     border: 0;
 }
 
-.thingTitle code.thisobject > a {
-    font-weight: bold;
+.thingTitle a {
     padding-left: 0;
+}
+.sidebar * {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+.sidebar ul {
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
 
 .sidebar a {
     color: #d9d9d9;
+}
+
+.sidebar li a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sidebar a:hover, .sidebar > div ul > li > .itemName > code:hover, .lbl-toggle:hover + code, .lbl-toggle:hover + code > a {
+    background-color: rgb(78, 74, 74)!important;
+    text-decoration: none;
 }
 
 .sidebar .childrenKindTitle, .sidebar span{
@@ -377,13 +373,107 @@ pre {
 .sidebar .childrenKindTitle{
     border-bottom: 0;
 }
+
+.lbl-toggle{
+    border: 0;
+    content: url(fonts/plus-square-o.svg);
+    -webkit-filter: invert(85%);
+    filter: invert(85%);
+    padding: 3px 2px 0 5px;
+}
+
 .tocChildrenToggle:checked + .lbl-toggle, .lbl-toggle:hover {
-    color: rgb(85, 165, 217);
+    -webkit-filter: invert(75%);
+    filter: invert(75%);
+}
+
+.tocChildrenToggle:checked + .lbl-toggle{
+    content: url(fonts/minus-square-o.svg);
+    -webkit-filter: invert(65%);
+    filter: invert(65%);
+}
+
+.tocChildrenToggle ~ code {
+    padding-left: 25px!important;
+}
+
+.expandableItem > code {
+    width: calc(100% - 30px)!important;
+}
+
+.expandableContent {
+    border: 0;
+    padding-left: 0;
 }
 
 .sidebarcontainer::-webkit-scrollbar {
     width: 0;
 }
+
+.thisobject a {
+    font-weight: bold;
+}
+
+/* nav.sidebar {
+    width: calc(100% - 20px);
+}
+.sidebar ul {
+    margin: 0 0 5px 0px;
+    padding: 0;
+    width: calc(100% - 10px);
+}
+.sidebar ul ul{
+    width: calc(100% - 7px);
+}
+.sidebar ul a {
+   width: calc(100% - 10px);  
+} */
+
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column 
+    }
+    body > nav {
+        position: relative;
+        display: block;
+        width: auto!important;
+    }
+    
+    body > div, body > footer {
+        margin-left: 0!important;
+        width: auto!important;
+        padding: 5px 15px 5px 15px;
+    }
+    
+    .navlinks {
+        width: auto!important;
+    }
+    .page-header {
+        margin-left: -15px;
+        margin-top: -5px;
+        width: calc(100% + 30px);
+    }
+    .navbar-header{
+        width: 100%!important;
+    }
+    .sidebarcontainer{
+        display: none;
+    }
+    
+}
+
+
+/* For bigger displays, i.e. full screen
+@media only screen and (min-width: 1330px) {
+    body > nav {
+        width: 350px!important;
+    }
+    body > div, body > footer {
+        margin-left: 350px!important;
+    }
+} */
 
 @font-face {
     font-family: Lato;
