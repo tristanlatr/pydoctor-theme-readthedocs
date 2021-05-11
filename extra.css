@@ -15,18 +15,22 @@ body > nav {
     color: rgb(155, 155, 155);
     left: 0px;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding-bottom: 54px;
     position: fixed;
     top: 0px;
     width: 300px!important;
+
+    overflow-y: scroll;
+    scrollbar-width: 0;
+}
+
+body > nav::-webkit-scrollbar{
+    width: 0;
 }
 
 body > div, body > footer {
     margin-left: 300px!important;
     padding: 0 40px 0 40px;
-    background-color: rgb(252, 252, 252)!important;
+    background-color: rgb(252, 252, 252)!important;width: calc(100% - 380px)!important;
 }
 
 body > footer {
@@ -43,7 +47,7 @@ body > footer {
     margin-top: 0;
     margin-left: -40px;
     width: calc(100% + 80px);
-    padding: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
     position: relative;
 }
 /* xref stlyles */
@@ -72,14 +76,21 @@ code > a {
 /* Header */ 
 
 .page-header > h1 {
-    font-size: 16px;
     padding-left: 15px;
-    margin-top: 7px;
+    margin-top: 15px;
+    font-size: 28px;
 }
 
 .page-header > h1 code {
     padding: 0;
+    font-size: 16px;
 }
+
+.page-header > h1 > code {
+    display: block;
+    line-height: 1.6;
+}
+
 .page-header > h1 code > a {
     font-size: 16px;
 }
@@ -89,7 +100,7 @@ code > a {
 p.caption, h1, h2, h3, h4, h5, h6, legend, .categoryHeader {
 
     font-weight: bold;
-    font-family: Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif;
+    font-family: "Roboto Slab",Georgia,Arial,sans-serif;
 }
 
 .categoryHeader{
@@ -97,32 +108,12 @@ p.caption, h1, h2, h3, h4, h5, h6, legend, .categoryHeader {
     margin: 15px 0 20px 0;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column 
-    }
-    body > nav {
-        position: relative;
-        width: auto!important;
-    }
-    
-    body > div, body > footer {
-        margin-left: 0!important;
-        width: auto!important;
-        padding: 5px 15px 5px 15px;
-    }
-    
-    .navlinks {
-        width: auto!important;
-    }
-    .page-header {
-        margin-left: -15px;
-        margin-top: -5px;
-        width: calc(100% + 30px);
-    }
-    
-}
+/* Remove anchor hack */
+a[name] {
+    position: initial;
+} 
+
+
 
 .navlinks {
     background-color: rgb(41, 128, 185);
@@ -230,8 +221,6 @@ code {
     margin-left: 30px;
 }
 
-
-
 /* Class definition block */ 
 
 .extrasDocstring > p:first-child{
@@ -253,7 +242,6 @@ div.rst-admonition p.rst-admonition-title {
     background: rgb(106, 176, 222);
     box-sizing: border-box;
     color: rgb(255, 255, 255)!important;
-    font: normal normal bold normal 18px/18px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
     margin: -12px -12px 12px;
     margin-block-end: 12px;
     margin-block-start: -12px;
@@ -269,8 +257,6 @@ div.rst-admonition p.rst-admonition-title {
 
 div.rst-admonition {
     color: rgb(64, 64, 64);
-    display: block;
-    font: normal normal normal normal 18px/24px Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
     margin: 0px 0px 24px;
     padding: 12px;
     border: 0;
@@ -314,14 +300,326 @@ pre {
     background: rgb(248, 248, 248);
 }
 
-#splitTables > table tr td:nth-child(2) {
-    width: 250px;
+/* Summary tables */
+
+#splitTables > table tr td:nth-child(1) {
+    width: 130px;
 }
+#splitTables > table tr td:nth-child(2) {
+    width: 300px;
+}
+
 @media only screen and (max-width: 1000px){
     #splitTables > table tr td:nth-child(2) {
         width: 35%;
     }
 }
+
+/* Sidebar */
+
+#main {
+    margin-left:0!important;
+}
+
+.sidebarcontainer {
+    width: 100%;
+    border-radius: 0;border: 0;
+    /* height: auto; */
+    height: auto;
+    position: relative;
+    display: block;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    background-color: transparent;
+    padding-left: 0;
+    padding-top: 0;
+    overflow-y: visible;
+    scrollbar-width: 0;
+}
+
+.sidebarcontainer code > a {
+    border: 0;
+}
+
+.sidebar .thingTitle {
+    padding-left: 10px;
+}
+.sidebar ul {
+    margin-left: 0;
+}
+.expandableItem > code {
+    margin-left: 0;
+}
+.sidebar ul {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.sidebar a {
+    color: #d9d9d9;
+    width: 100%;
+}
+
+.sidebar > div:nth-child(1) a {
+    color: #333;
+    width: 100%;
+}
+
+.sidebar li a, .sidebar .childrenKindTitle {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 0;
+}
+
+.sidebar li li a, .sidebar li .childrenKindTitle {
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+.sidebar li li li a, .sidebar li li .childrenKindTitle{
+    padding-left: 45px;
+    padding-right: 25px;
+}
+.sidebar li li li li a, .sidebar li li li .childrenKindTitle{
+    padding-left: 65px;
+    padding-right: 35px;
+}
+.sidebar li li li li li a, .sidebar li li li li .childrenKindTitle{
+    padding-left: 85px;
+    padding-right: 45px;
+}
+.sidebar li li li li li li a, .sidebar li li li li li .childrenKindTitle{
+    padding-left: 95px;
+    padding-right: 55px;
+}
+.sidebar > div ul > li > .itemName > code{
+    display: flex;
+}
+
+.sidebar li a{
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.lbl-toggle{
+    border: 0;
+    content: url(fonts/plus-square-o.svg);
+    padding: 7px 0 0 15px;
+    width: 14px;
+    height: 14px;
+}
+
+.tocChildrenToggle:checked + .lbl-toggle{
+    content: url(fonts/minus-square-o.svg);
+}
+
+.sidebar > div:not(:first-child) .lbl-toggle  {
+    -webkit-filter: invert(85%);
+    filter: invert(85%);
+}
+
+.sidebar > div:not(:first-child) .tocChildrenToggle:checked + .lbl-toggle {
+    -webkit-filter: invert(65%);
+    filter: invert(65%);
+}
+
+.sidebar > div:not(:first-child) .lbl-toggle:hover {
+    -webkit-filter: invert(75%);
+    filter: invert(75%);
+}
+
+.sidebar > div:first-child .lbl-toggle  {
+    -webkit-filter: invert(15%);
+    filter: invert(15%);
+}
+
+.sidebar > div:first-child .tocChildrenToggle:checked + .lbl-toggle {
+    -webkit-filter: invert(25%);
+    filter: invert(25%);
+}
+.sidebar > div:first-child .lbl-toggle:hover {
+    -webkit-filter: invert(30%);
+    filter: invert(30%);
+}
+
+.sidebar li li .lbl-toggle {
+    padding-left: 25px;
+}
+
+.sidebar li li li .lbl-toggle {
+    padding-left: 45px;
+}
+
+.sidebar li li li li .lbl-toggle {
+    padding-left: 65px;
+}
+.sidebar li li li li li .lbl-toggle {
+    padding-left: 85px;
+}
+.sidebar li li li li li li .lbl-toggle {
+    padding-left: 105px;
+}
+
+/* Style of the nested parents */ 
+.sidebar > div:not(:first-child) li > .itemName:hover, 
+.sidebar > div:not(:first-child) li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(60, 60, 60)!important;
+}
+.sidebar > div:not(:first-child) li li  > .itemName:hover, 
+.sidebar > div:not(:first-child) li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(65, 65, 65)!important;
+}
+.sidebar > div:not(:first-child) li li li > .itemName:hover, 
+.sidebar > div:not(:first-child) li li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(70, 70, 70)!important;
+}
+.sidebar > div:not(:first-child) li li li li > .itemName:hover, 
+.sidebar > div:not(:first-child) li li li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(80, 80, 80)!important;
+}
+
+.sidebar > div:first-child{
+    /* background-color: rgb(60, 60, 60);
+    border-bottom: 2px solid rgb(210, 220, 216); */
+    padding-top: 0;
+    padding-bottom: 10px;
+    background-color: rgb(227, 227, 227);
+    /* margin-top: 5px; */
+}
+
+nav.sidebar > div:nth-child(1) > div.thingTitle {
+    background-color: rgb(252, 252, 252);
+    border-bottom: 1px solid rgb(201, 201, 201);
+    border-top: 1px solid rgb(201, 201, 201);
+}
+
+.sidebar > div:nth-child(1) li  > .itemName:hover, 
+nav.sidebar > div:nth-child(1) li .tocChildrenToggle:checked ~ .expandableContent,
+.sidebar a.rst-reference:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.sidebar > div:nth-child(1) li li > .itemName:hover, 
+nav.sidebar > div:nth-child(1) li li .tocChildrenToggle:checked ~ .expandableContent {
+    background-color: rgb(190, 190, 190);
+}
+
+
+/* .sidebar li .lbl-toggle:hover + code, */
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+.lbl-toggle + code > a:hover{
+    background-color: transparent!important;
+}
+.sidebar .thingTitle > code a:hover{
+    background-color: rgba(255, 255, 255, 0.05)!important;
+}
+
+.sidebar .thingTitle > code a{
+    padding: 3px 7px 3px 7px;
+}
+
+.sidebar .thingTitle > span {
+    color: rgb(85, 165, 217);
+    display: inline;
+    font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 5px;
+}
+.sidebar .childrenKindTitle {
+    border-bottom: 0;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: rgb(85, 165, 217);
+}
+.sidebar > div:first-child .childrenKindTitle, .sidebar > div:first-child .thingTitle > span {
+    color:rgb(69, 130, 170);
+}
+.sidebar .childrenKindTitle:not(:first-child){
+    margin-top: 5px;
+}
+
+.sidebar > div{
+    padding-top: 10px;
+}
+
+.sidebar > div > hr {
+    display: none;
+}
+
+.tocChildrenToggle ~ code {
+    padding-left: 20px!important;
+}
+
+.expandableItem > code {
+    width: 100%;
+}
+
+.expandableContent {
+    border: 0;
+    padding-left: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebarcontainer::-webkit-scrollbar {
+    width: 0;
+}
+
+.thisobject a {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column 
+    }
+    body > nav {
+        position: relative;
+        display: block;
+        width: auto!important;
+    }
+    
+    body > div, body > footer {
+        margin-left: 0!important;
+        width: auto!important;
+        padding: 5px 15px 5px 15px;
+    }
+    
+    .navlinks {
+        width: auto!important;
+    }
+    .page-header {
+        margin-left: -15px;
+        margin-top: -5px;
+        width: calc(100% + 30px);
+    }
+    .navbar-header{
+        width: 100%!important;
+    }
+    .sidebarcontainer{
+        display: none;
+    }
+    
+}
+
+
+/* For bigger displays, i.e. full screen
+@media only screen and (min-width: 1330px) {
+    body > nav {
+        width: 350px!important;
+    }
+    body > div, body > footer {
+        margin-left: 350px!important;
+    }
+} */
 
 @font-face {
     font-family: Lato;
@@ -340,22 +638,6 @@ pre {
 }
 
 @font-face {
-    font-family: Lato;
-    src: url(fonts/lato-bold-italic.woff2) format("woff2"), url(fonts/lato-bold-italic.woff) format("woff");
-    font-weight: 700;
-    font-style: italic;
-    font-display:block
-}
-
-@font-face {
-    font-family: Lato;
-    src: url(fonts/lato-normal-italic.woff2) format("woff2"), url(fonts/lato-normal-italic.woff) format("woff");
-    font-weight: 400;
-    font-style: italic;
-    font-display:block
-}
-
-@font-face {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: 400;
@@ -370,3 +652,4 @@ pre {
     src: url(fonts/Roboto-Slab-Bold.woff2) format("woff2"), url(fonts/Roboto-Slab-Bold.woff) format("woff");
     font-display: block
 }
+
