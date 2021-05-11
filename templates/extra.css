@@ -15,12 +15,16 @@ body > nav {
     color: rgb(155, 155, 155);
     left: 0px;
     height: 100%;
-
     position: fixed;
     top: 0px;
     width: 300px!important;
-    display: flex;
-    flex-direction: column;
+
+    overflow-y: scroll;
+    scrollbar-width: 0;
+}
+
+body > nav::-webkit-scrollbar{
+    width: 0;
 }
 
 body > div, body > footer {
@@ -73,8 +77,8 @@ code > a {
 
 .page-header > h1 {
     padding-left: 15px;
-    margin-top: 5px;
-    font-size: 24px;
+    margin-top: 15px;
+    font-size: 28px;
 }
 
 .page-header > h1 code {
@@ -330,7 +334,8 @@ pre {
     margin-left: 0px;
     background-color: transparent;
     padding-left: 0;
-    padding-top: 25px;
+    padding-top: 0;
+    overflow-y: visible;
     scrollbar-width: 0;
 }
 
@@ -341,9 +346,11 @@ pre {
 .sidebar .thingTitle {
     padding-left: 10px;
 }
-.sidebar * {
-    margin-left: 0!important;
-    margin-right: 0!important;
+.sidebar ul {
+    margin-left: 0;
+}
+.expandableItem > code {
+    margin-left: 0;
 }
 .sidebar ul {
     padding-left: 0!important;
@@ -352,101 +359,213 @@ pre {
 
 .sidebar a {
     color: #d9d9d9;
+    width: 100%;
+}
+
+.sidebar > div:nth-child(1) a {
+    color: #333;
+    width: 100%;
 }
 
 .sidebar li a, .sidebar .childrenKindTitle {
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: 0;
 }
 
 .sidebar li li a, .sidebar li .childrenKindTitle {
-    padding-left: 30px;
+    padding-left: 25px;
     padding-right: 15px;
 }
 
 .sidebar li li li a, .sidebar li li .childrenKindTitle{
-    padding-left: 50px;
+    padding-left: 45px;
     padding-right: 25px;
 }
 .sidebar li li li li a, .sidebar li li li .childrenKindTitle{
-    padding-left: 70px;
+    padding-left: 65px;
     padding-right: 35px;
 }
 .sidebar li li li li li a, .sidebar li li li li .childrenKindTitle{
-    padding-left: 90px;
+    padding-left: 85px;
     padding-right: 45px;
 }
 .sidebar li li li li li li a, .sidebar li li li li li .childrenKindTitle{
-    padding-left: 110px;
+    padding-left: 95px;
     padding-right: 55px;
 }
 .sidebar > div ul > li > .itemName > code{
     display: flex;
 }
 
-.sidebar a:hover, .sidebar > div ul > li > .itemName > code:hover, .lbl-toggle:hover + code, .lbl-toggle:hover + code > a {
-    background-color: rgb(78, 74, 74)!important;
-    text-decoration: none;
+.sidebar li a{
+    padding-top:5px;
+    padding-bottom: 5px;
 }
-
-.sidebar .childrenKindTitle, .sidebar span{
-    color: rgb(85, 165, 217);
-    display: inline;
-    font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
-    text-transform: uppercase;
-}
-.sidebar .childrenKindTitle{
-    border-bottom: 0;
-}
-
 .lbl-toggle{
     border: 0;
     content: url(fonts/plus-square-o.svg);
-    -webkit-filter: invert(85%);
-    filter: invert(85%);
-    padding: 3px 0 0 15px;
-}
-
-.sidebar li li .lbl-toggle {
-    padding-left: 30px;
-}
-
-.sidebar li li li .lbl-toggle {
-    padding-left: 50px;
-}
-
-.sidebar li li li li .lbl-toggle {
-    padding-left: 70px;
-}
-.sidebar li li li li li .lbl-toggle {
-    padding-left: 90px;
-}
-.sidebar li li li li li li .lbl-toggle {
-    padding-left: 110px;
-}
-
-.tocChildrenToggle:checked + .lbl-toggle, .lbl-toggle:hover {
-    -webkit-filter: invert(75%);
-    filter: invert(75%);
+    padding: 7px 0 0 15px;
+    width: 14px;
+    height: 14px;
 }
 
 .tocChildrenToggle:checked + .lbl-toggle{
     content: url(fonts/minus-square-o.svg);
+}
+
+.sidebar > div:not(:first-child) .lbl-toggle  {
+    -webkit-filter: invert(85%);
+    filter: invert(85%);
+}
+
+.sidebar > div:not(:first-child) .tocChildrenToggle:checked + .lbl-toggle {
     -webkit-filter: invert(65%);
     filter: invert(65%);
 }
 
+.sidebar > div:not(:first-child) .lbl-toggle:hover {
+    -webkit-filter: invert(75%);
+    filter: invert(75%);
+}
+
+.sidebar > div:first-child .lbl-toggle  {
+    -webkit-filter: invert(15%);
+    filter: invert(15%);
+}
+
+.sidebar > div:first-child .tocChildrenToggle:checked + .lbl-toggle {
+    -webkit-filter: invert(25%);
+    filter: invert(25%);
+}
+.sidebar > div:first-child .lbl-toggle:hover {
+    -webkit-filter: invert(30%);
+    filter: invert(30%);
+}
+
+.sidebar li li .lbl-toggle {
+    padding-left: 25px;
+}
+
+.sidebar li li li .lbl-toggle {
+    padding-left: 45px;
+}
+
+.sidebar li li li li .lbl-toggle {
+    padding-left: 65px;
+}
+.sidebar li li li li li .lbl-toggle {
+    padding-left: 85px;
+}
+.sidebar li li li li li li .lbl-toggle {
+    padding-left: 105px;
+}
+
+/* Style of the nested parents */ 
+.sidebar > div:not(:first-child) li > .itemName:hover, 
+.sidebar > div:not(:first-child) li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(60, 60, 60)!important;
+}
+.sidebar > div:not(:first-child) li li  > .itemName:hover, 
+.sidebar > div:not(:first-child) li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(65, 65, 65)!important;
+}
+.sidebar > div:not(:first-child) li li li > .itemName:hover, 
+.sidebar > div:not(:first-child) li li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(70, 70, 70)!important;
+}
+.sidebar > div:not(:first-child) li li li li > .itemName:hover, 
+.sidebar > div:not(:first-child) li li li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(80, 80, 80)!important;
+}
+
+.sidebar > div:first-child{
+    /* background-color: rgb(60, 60, 60);
+    border-bottom: 2px solid rgb(210, 220, 216); */
+    padding-top: 0;
+    padding-bottom: 10px;
+    background-color: rgb(227, 227, 227);
+    /* margin-top: 5px; */
+}
+
+nav.sidebar > div:nth-child(1) > div.thingTitle {
+    background-color: rgb(252, 252, 252);
+    border-bottom: 1px solid rgb(201, 201, 201);
+    border-top: 1px solid rgb(201, 201, 201);
+}
+
+.sidebar > div:nth-child(1) li  > .itemName:hover, 
+nav.sidebar > div:nth-child(1) li .tocChildrenToggle:checked ~ .expandableContent,
+.sidebar a.rst-reference:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.sidebar > div:nth-child(1) li li > .itemName:hover, 
+nav.sidebar > div:nth-child(1) li li .tocChildrenToggle:checked ~ .expandableContent {
+    background-color: rgb(190, 190, 190);
+}
+
+
+/* .sidebar li .lbl-toggle:hover + code, */
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+.lbl-toggle + code > a:hover{
+    background-color: transparent!important;
+}
+.sidebar .thingTitle > code a:hover{
+    background-color: rgba(255, 255, 255, 0.05)!important;
+}
+
+.sidebar .thingTitle > code a{
+    padding: 3px 7px 3px 7px;
+}
+
+.sidebar .thingTitle > span {
+    color: rgb(85, 165, 217);
+    display: inline;
+    font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 5px;
+}
+.sidebar .childrenKindTitle {
+    border-bottom: 0;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: rgb(85, 165, 217);
+}
+.sidebar > div:first-child .childrenKindTitle, .sidebar > div:first-child .thingTitle > span {
+    color:rgb(69, 130, 170);
+}
+.sidebar .childrenKindTitle:not(:first-child){
+    margin-top: 5px;
+}
+
+.sidebar > div{
+    padding-top: 10px;
+}
+
+.sidebar > div > hr {
+    display: none;
+}
+
 .tocChildrenToggle ~ code {
-    padding-left: 25px!important;
+    padding-left: 20px!important;
 }
 
 .expandableItem > code {
-    width: calc(100% - 30px)!important;
+    width: 100%;
 }
 
 .expandableContent {
     border: 0;
     padding-left: 0;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .sidebarcontainer::-webkit-scrollbar {
