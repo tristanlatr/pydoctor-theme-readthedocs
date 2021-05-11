@@ -338,8 +338,8 @@ pre {
     border: 0;
 }
 
-.thingTitle a {
-    padding-left: 0;
+.sidebar .thingTitle {
+    padding-left: 10px;
 }
 .sidebar * {
     margin-left: 0!important;
@@ -354,9 +354,34 @@ pre {
     color: #d9d9d9;
 }
 
-.sidebar li a {
-    padding-left: 5px;
-    padding-right: 5px;
+.sidebar li a, .sidebar .childrenKindTitle {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sidebar li li a, .sidebar li .childrenKindTitle {
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+.sidebar li li li a, .sidebar li li .childrenKindTitle{
+    padding-left: 50px;
+    padding-right: 25px;
+}
+.sidebar li li li li a, .sidebar li li li .childrenKindTitle{
+    padding-left: 70px;
+    padding-right: 35px;
+}
+.sidebar li li li li li a, .sidebar li li li li .childrenKindTitle{
+    padding-left: 90px;
+    padding-right: 45px;
+}
+.sidebar li li li li li li a, .sidebar li li li li li .childrenKindTitle{
+    padding-left: 110px;
+    padding-right: 55px;
+}
+.sidebar > div ul > li > .itemName > code{
+    display: flex;
 }
 
 .sidebar a:hover, .sidebar > div ul > li > .itemName > code:hover, .lbl-toggle:hover + code, .lbl-toggle:hover + code > a {
@@ -379,7 +404,25 @@ pre {
     content: url(fonts/plus-square-o.svg);
     -webkit-filter: invert(85%);
     filter: invert(85%);
-    padding: 3px 2px 0 5px;
+    padding: 3px 0 0 15px;
+}
+
+.sidebar li li .lbl-toggle {
+    padding-left: 30px;
+}
+
+.sidebar li li li .lbl-toggle {
+    padding-left: 50px;
+}
+
+.sidebar li li li li .lbl-toggle {
+    padding-left: 70px;
+}
+.sidebar li li li li li .lbl-toggle {
+    padding-left: 90px;
+}
+.sidebar li li li li li li .lbl-toggle {
+    padding-left: 110px;
 }
 
 .tocChildrenToggle:checked + .lbl-toggle, .lbl-toggle:hover {
@@ -413,22 +456,6 @@ pre {
 .thisobject a {
     font-weight: bold;
 }
-
-/* nav.sidebar {
-    width: calc(100% - 20px);
-}
-.sidebar ul {
-    margin: 0 0 5px 0px;
-    padding: 0;
-    width: calc(100% - 10px);
-}
-.sidebar ul ul{
-    width: calc(100% - 7px);
-}
-.sidebar ul a {
-   width: calc(100% - 10px);  
-} */
-
 
 @media screen and (max-width: 768px) {
     body {
