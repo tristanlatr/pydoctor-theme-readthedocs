@@ -130,7 +130,33 @@ a[name] {
 
 .navbar-brand >  a {
     color: rgb(252, 252, 252)!important;
-    padding: 5px!important;
+    padding: 3px 5px!important;
+}
+
+.navbar-brand >  a.projecthome::before {
+    background-image: url(fonts/home.svg);
+    background-size: 18px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px; 
+    height: 15px;
+    content:"";
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.navbar-brand >  a:last-child::before {
+    background-image: url(fonts/book.svg);
+    background-size: 18px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px; 
+    height: 15px;
+    content:"";
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 .navbar-brand > a:hover, .navlinks > a:hover {
