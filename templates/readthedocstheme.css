@@ -39,6 +39,7 @@ body > footer {
 }
 
 /* top navagation bar */
+/* TODO: Make it more like RTD's */
 
 .page-header {
     border-bottom: 1px solid rgb(210, 220, 216);
@@ -50,6 +51,7 @@ body > footer {
     padding: 5px 0 5px 0;
     position: relative;
 }
+
 /* xref stlyles */
 
 code > a {
@@ -71,6 +73,15 @@ code > a {
     font-size: 14px;
     border: 0;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+code, .pre, #childList > div .functionHeader,
+#splitTables > table tr td:nth-child(2), .fieldArg {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+code {
+    background: transparent;
 }
 
 /* Header */ 
@@ -114,7 +125,7 @@ a[name] {
 } 
 
 
-
+/* Top-left navigation links */
 .navlinks {
     background-color: rgb(41, 128, 185);
     color: rgb(252, 252, 252)!important;
@@ -175,6 +186,8 @@ a[name] {
     margin-top: 5px
 }
 
+
+/* Generics for links */
 a, a:visited {
     text-decoration:none;
 }
@@ -182,6 +195,7 @@ a:hover{
     text-decoration: underline;
 }
 
+/* Part of bootstrap CSS: buttons */
 .btn {
     cursor: pointer;
 }
@@ -207,6 +221,7 @@ a:hover{
     background-color:transparent
 }
 
+/* Summary tables */
 
 #splitTables > table {
     -webkit-border-horizontal-spacing: 0px;
@@ -220,14 +235,20 @@ a:hover{
     border-bottom: 1px solid rgb(210, 220, 216);
 }
 
-code, .pre, #childList > div .functionHeader,
-#splitTables > table tr td:nth-child(2), .fieldArg {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+#splitTables > table tr td:nth-child(1) {
+    width: 130px;
+}
+#splitTables > table tr td:nth-child(2) {
+    width: 300px;
 }
 
-code {
-    background: transparent;
+@media only screen and (max-width: 1000px){
+    #splitTables > table tr td:nth-child(2) {
+        width: 35%;
+    }
 }
+
+/* Child list */
 
 #childList > div {
     margin: 0;
@@ -316,6 +337,8 @@ div.tip, div.hint, div.important {
     background-color: #d9edf7;
 }
 
+/* Code blocks */
+
 pre {
     box-sizing: border-box;
     color: rgb(64, 64, 64);
@@ -326,22 +349,7 @@ pre {
     background: rgb(248, 248, 248);
 }
 
-/* Summary tables */
-
-#splitTables > table tr td:nth-child(1) {
-    width: 130px;
-}
-#splitTables > table tr td:nth-child(2) {
-    width: 300px;
-}
-
-@media only screen and (max-width: 1000px){
-    #splitTables > table tr td:nth-child(2) {
-        width: 35%;
-    }
-}
-
-/* Sidebar */
+/* Sidebar containers */
 
 #main {
     margin-left:0!important;
@@ -365,13 +373,53 @@ pre {
     scrollbar-width: 0;
 }
 
+.sidebar > div{
+    padding-top: 10px;
+}
+
+.sidebar > div > hr {
+    display: none;
+}
+
+.sidebarcontainer::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Sidebar links */
+
 .sidebarcontainer code > a {
     border: 0;
 }
 
+.sidebar li a{
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+/* default: light */
+.sidebar a { 
+    color: #d9d9d9;
+    width: 100%;
+}
+
+/* parent section: darker */
+.sidebar > div:nth-child(1) a {
+    color: #333;
+    width: 100%;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+/* Sectionn title */
 .sidebar .thingTitle {
     padding-left: 10px;
 }
+
+/* Setting margins to 0, 
+   indentation is controled with the padding in this theme */
+
 .sidebar ul {
     margin-left: 0;
 }
@@ -383,15 +431,7 @@ pre {
     padding-right: 0!important;
 }
 
-.sidebar a {
-    color: #d9d9d9;
-    width: 100%;
-}
-
-.sidebar > div:nth-child(1) a {
-    color: #333;
-    width: 100%;
-}
+/* Sidebar indentations */
 
 .sidebar li a, .sidebar .childrenKindTitle {
     padding-left: 15px;
@@ -420,14 +460,15 @@ pre {
     padding-left: 95px;
     padding-right: 55px;
 }
+
+/* Items name */
+
 .sidebar > div ul > li > .itemName > code{
     display: flex;
 }
 
-.sidebar li a{
-    padding-top:5px;
-    padding-bottom: 5px;
-}
+/* Plus/Minus toggles */
+
 .lbl-toggle{
     border: 0;
     content: url(fonts/plus-square-o.svg);
@@ -439,6 +480,8 @@ pre {
 .tocChildrenToggle:checked + .lbl-toggle{
     content: url(fonts/minus-square-o.svg);
 }
+
+/* Plus/Minus toggles in parent's section */
 
 .sidebar > div:not(:first-child) .lbl-toggle  {
     -webkit-filter: invert(85%);
@@ -455,6 +498,8 @@ pre {
     filter: invert(75%);
 }
 
+/* Plus/Minus toggles in current section */
+
 .sidebar > div:first-child .lbl-toggle  {
     -webkit-filter: invert(15%);
     filter: invert(15%);
@@ -469,6 +514,8 @@ pre {
     filter: invert(30%);
 }
 
+/* Plus/Minus toggles indentations */
+
 .sidebar li li .lbl-toggle {
     padding-left: 25px;
 }
@@ -476,7 +523,6 @@ pre {
 .sidebar li li li .lbl-toggle {
     padding-left: 45px;
 }
-
 .sidebar li li li li .lbl-toggle {
     padding-left: 65px;
 }
@@ -487,23 +533,7 @@ pre {
     padding-left: 105px;
 }
 
-/* Style of the nested parents */ 
-.sidebar > div:not(:first-child) li > .itemName:hover, 
-.sidebar > div:not(:first-child) li .tocChildrenToggle:checked ~ .expandableContent{
-    background-color: rgb(60, 60, 60)!important;
-}
-.sidebar > div:not(:first-child) li li  > .itemName:hover, 
-.sidebar > div:not(:first-child) li li .tocChildrenToggle:checked ~ .expandableContent{
-    background-color: rgb(65, 65, 65)!important;
-}
-.sidebar > div:not(:first-child) li li li > .itemName:hover, 
-.sidebar > div:not(:first-child) li li li .tocChildrenToggle:checked ~ .expandableContent{
-    background-color: rgb(70, 70, 70)!important;
-}
-.sidebar > div:not(:first-child) li li li li > .itemName:hover, 
-.sidebar > div:not(:first-child) li li li li .tocChildrenToggle:checked ~ .expandableContent{
-    background-color: rgb(80, 80, 80)!important;
-}
+/* Style of the nested contents background in the current object section (light) */ 
 
 .sidebar > div:first-child{
     /* background-color: rgb(60, 60, 60);
@@ -531,15 +561,31 @@ nav.sidebar > div:nth-child(1) li li .tocChildrenToggle:checked ~ .expandableCon
     background-color: rgb(190, 190, 190);
 }
 
+/* Style of the nested contents in the parent object section (darker) */ 
 
-/* .sidebar li .lbl-toggle:hover + code, */
-.sidebar a:hover {
-    text-decoration: none;
+.sidebar > div:not(:first-child) li > .itemName:hover, 
+.sidebar > div:not(:first-child) li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(60, 60, 60)!important;
+}
+.sidebar > div:not(:first-child) li li  > .itemName:hover, 
+.sidebar > div:not(:first-child) li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(65, 65, 65)!important;
+}
+.sidebar > div:not(:first-child) li li li > .itemName:hover, 
+.sidebar > div:not(:first-child) li li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(70, 70, 70)!important;
+}
+.sidebar > div:not(:first-child) li li li li > .itemName:hover, 
+.sidebar > div:not(:first-child) li li li li .tocChildrenToggle:checked ~ .expandableContent{
+    background-color: rgb(80, 80, 80)!important;
 }
 
 .lbl-toggle + code > a:hover{
     background-color: transparent!important;
 }
+
+/* Sidebar titles */
+
 .sidebar .thingTitle > code a:hover{
     background-color: rgba(255, 255, 255, 0.05)!important;
 }
@@ -571,17 +617,11 @@ nav.sidebar > div:nth-child(1) li li .tocChildrenToggle:checked ~ .expandableCon
     margin-top: 5px;
 }
 
-.sidebar > div{
-    padding-top: 10px;
-}
-
-.sidebar > div > hr {
-    display: none;
-}
-
 .tocChildrenToggle ~ code {
     padding-left: 20px!important;
 }
+
+/* Sidebar Expandable content */
 
 .expandableItem > code {
     width: 100%;
@@ -594,13 +634,13 @@ nav.sidebar > div:nth-child(1) li li .tocChildrenToggle:checked ~ .expandableCon
     margin-left: 0;
 }
 
-.sidebarcontainer::-webkit-scrollbar {
-    width: 0;
-}
+/* Sidebar This object special case */
 
 .thisobject a {
     font-weight: bold;
 }
+
+/* Simply hide the sidebar on smaller screens */
 
 @media screen and (max-width: 768px) {
     body {
