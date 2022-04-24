@@ -1,6 +1,8 @@
 ReadTheDocs theme for pydoctor
 ==============================
 
+**Thid theme is now a part of pydoctor, use it with option** ``--theme=readthedocs``.
+
 This repository contains a collection of template files that can 
 be used with `pydoctor <https://github.com/twisted/pydoctor>`_ 
 to make the output more like ReadTheDocs' theme.
